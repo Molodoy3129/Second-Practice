@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+const cities = [
+{name: 'Москва', population: 900000},
+{name: 'Cакнкт-Петербург', population: 1000000},
+{name: 'Новосибирск', population: 3000000},
+{name: 'Калиниград', population: 1000000},
+{name: 'Калуга', population: 100000},
+
+];
+cities.unshift({ name: 'Rovno', population:4000000 });
+cities.push({name:'Grozny', population: 5000000});
+console.table(cities)
+
+let vCit = cities.forEach((item,index,array) =>{
+   console.log(item)
+})
+
+
+const bigCities = cities.filter(cities=>{
+   return  cities.population >= 1000000
+})
+console.table(bigCities);
+
+
+let cities2 = cities.map((item,index,array) =>{
+    return (item.population * 1.5)
+})
+
+
+console.log(cities2)
+
+ 
+
+ 
+ arr = cities2.reduce((sum,item,index,array) =>{
+   return (sum + item) 
+}, 0)
+
+console.log(arr)
+
+
+
+
+</script>
+</body>
+</html>
